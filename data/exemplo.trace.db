@@ -1,0 +1,42 @@
+2021-12-21 15:22:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('O Galaxy M62 \u00e9 um smartphone para quem deseja um aparelho de alta performance e com muita pot\u00eancia para ... (1365)"; SQL statement:
+insert into product (id, delivery_date, description, name, product_url, value) values (null, ?, ?, ?, ?, ?) [22001-200]
+2021-12-21 15:37:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('O Galaxy M62 \u00e9 um smartphone para quem deseja um aparelho de alta performance e com muita pot\u00eancia para ... (283)"; SQL statement:
+insert into product (id, delivery_date, description, name, product_url, value) values (null, ?, ?, ?, ?, ?) [22001-200]
+2021-12-21 15:46:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "PRODUCT_URL VARCHAR(255)": "'https://www.casasbahia.com.br/smartphone-samsung-galaxy-m62-preto-128gb-8gb-ram-camera-quadrupla-selfie-de-32mp-tela-infinita-d... (394)"; SQL statement:
+insert into product (id, delivery_date, description, name, product_url, value) values (null, ?, ?, ?, ?, ?) [22001-200]
+2021-12-21 15:57:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "PRODUCT_URL VARCHAR(255)": "'https://www.casasbahia.com.br/smartphone-samsung-galaxy-m62-preto-128gb-8gb-ram-camera-quadrupla-selfie-de-32mp-tela-infinita-d... (394)"; SQL statement:
+insert into product (id, delivery_date, description, name, product_url, value) values (null, ?, ?, ?, ?, ?) [22001-200]
+2021-12-21 16:01:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "STRINGDECODE('C\u00f3digo\t3963237473\r\nC\u00f3digo de barras\t4710886510758\r\nCor\tPreto, Vermelho\r\nAcer p/n\tNH. QDPAL.004... (3792)"; SQL statement:
+insert into product (id, delivery_date, description, name, product_url, value) values (null, ?, ?, ?, ?, ?) [22001-200]
+2021-12-21 16:04:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(1000)": "STRINGDECODE('C\u00f3digo\t3963237473\r\nC\u00f3digo de barras\t4710886510758\r\nCor\tPreto, Vermelho\r\nAcer p/n\tNH. QDPAL.004... (3792)"; SQL statement:
+insert into product (id, delivery_date, description, name, product_url, value) values (null, ?, ?, ?, ?, ?) [22001-200]
+2021-12-21 16:04:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(1000)": "STRINGDECODE('C\u00f3digo\t3963237473\r\nC\u00f3digo de barras\t4710886510758\r\nCor\tPreto, Vermelho\r\nAcer p/n\tNH. QDPAL.004... (1324)"; SQL statement:
+insert into product (id, delivery_date, description, name, product_url, value) values (null, ?, ?, ?, ?, ?) [22001-200]
+2021-12-21 16:05:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "PRODUCT_URL VARCHAR(255)": "'https://www.casasbahia.com.br/smartphone-samsung-galaxy-m62-preto-128gb-8gb-ram-camera-quadrupla-selfie-de-32mp-tela-infinita-d... (394)"; SQL statement:
+insert into product (id, delivery_date, description, name, product_url, value) values (null, ?, ?, ?, ?, ?) [22001-200]
+2021-12-21 16:05:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "PRODUCT_URL VARCHAR(255)": "'https://www.casasbahia.com.br/smartphone-samsung-galaxy-m62-preto-128gb-8gb-ram-camera-quadrupla-selfie-de-32mp-tela-infinita-d... (394)"; SQL statement:
+insert into product (id, delivery_date, description, name, product_url, value) values (null, ?, ?, ?, ?, ?) [22001-200]
+2021-12-21 16:06:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "PRODUCT_URL VARCHAR(255)": "'https://www.americanas.com.br/produto/3963237473?epar=bp_pl_00_go_inf_notebooks_todas_geral_gmv&opn=YSMESP&WT.srch=1&gclid=Cj0K... (258)"; SQL statement:
+insert into product (id, delivery_date, description, name, product_url, value) values (null, ?, ?, ?, ?, ?) [22001-200]
+2021-12-21 16:06:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'fdsffsdfdsfdsfdfdfdsffsdfdsfdsfdfdfdsffsdfdsfdsfdfdfdsffsdfdsfdsfdfdfdsffsdfdsfdsfdfdfdsffsdfdsfdsfdfdfdsffsdfdsfdsfdfdfdsffsdf... (527)"; SQL statement:
+insert into product (id, delivery_date, description, name, product_url, value) values (null, ?, ?, ?, ?, ?) [22001-200]
+2021-12-21 16:06:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "PRODUCT_URL VARCHAR(255)": "'https://www.americanas.com.br/produto/3963237473?epar=bp_pl_00_go_inf_notebooks_todas_geral_gmv&opn=YSMESP&WT.srch=1&gclid=Cj0K... (258)"; SQL statement:
+insert into product (id, delivery_date, description, name, product_url, value) values (null, ?, ?, ?, ?, ?) [22001-200]
+2021-12-21 16:07:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "PRODUCT_URL VARCHAR(255)": "'https://www.americanas.com.br/produto/3963237473?epar=bp_pl_00_go_inf_notebooks_todas_geral_gmv&opn=YSMESP&WT.srch=1&gclid=Cj0K... (258)"; SQL statement:
+insert into product (id, delivery_date, description, name, product_url, value) values (null, ?, ?, ?, ?, ?) [22001-200]
+2021-12-21 16:08:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION VARCHAR(255)": "'https://www.casasbahia.com.br/smartphone-samsung-galaxy-m62-preto-128gb-8gb-ram-camera-quadrupla-selfie-de-32mp-tela-infinita-d... (1576)"; SQL statement:
+insert into product (id, delivery_date, description, name, product_url, value) values (null, ?, ?, ?, ?, ?) [22001-200]
