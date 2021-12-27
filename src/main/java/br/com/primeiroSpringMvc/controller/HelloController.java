@@ -1,29 +1,24 @@
 package br.com.primeiroSpringMvc.controller;
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.util.Optional;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.servlet.view.RedirectView;
 
+import br.com.primeiroSpringMvc.dto.ProductDto;
 import br.com.primeiroSpringMvc.model.Product;
 import br.com.primeiroSpringMvc.repository.ProductReposittory;
 
 @Controller
 public class HelloController {
 	
-	private final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-
 	private ProductReposittory productRepository;
 	
 	@Autowired
@@ -32,9 +27,9 @@ public class HelloController {
 	}
 
 	@GetMapping("/")
-	public String index(HttpServletRequest request) {
+	public String index(Model model) {
 		List<Product> products = productRepository.findAll();
-		request.setAttribute("products", products);
+		model.addAttribute("products", products);
 		return "index";
 	}
 	
@@ -44,50 +39,35 @@ public class HelloController {
 	}
 	
 	@PostMapping("register")
-	public RedirectView register(HttpServletRequest request) {
-		String name = request.getParameter("name");
-		BigDecimal value = new BigDecimal(request.getParameter("value"));
-		LocalDate deliveryDate = LocalDate.parse(request.getParameter("deliveryDate"), DATE_FORMATTER);
-		String productUrl = request.getParameter("productUrl");
-		String description = request.getParameter("description");
+	public String register(@Valid ProductDto obj, BindingResult result) {
+
+		if (result.hasErrors()) {
+			return "redirect:register";
+		}
 		
-		Product product = new Product(null, name, value, deliveryDate, productUrl, description);
+		Product product = obj.toProduct();
 		productRepository.save(product);
-		
-		RedirectView redirectView = new RedirectView();
-		redirectView.setUrl("/");
-		return redirectView;
+		return "redirect:/";
 	}
 	
 	@GetMapping("update/{id}")
-	public String formUpdate(HttpServletRequest request,@PathVariable Long id) {
+	public String formUpdate(Model model,@PathVariable Long id) {
 		Product product = productRepository.findById(id).orElseThrow(() -> new RuntimeException());
-		request.setAttribute("product", product);
+		model.addAttribute("product", product);
 		return "update";
 	}
 	
 	@PostMapping("update")
-	public RedirectView update(HttpServletRequest request) {
-		String name = request.getParameter("name");
-		BigDecimal value = new BigDecimal(request.getParameter("value"));
-		LocalDate deliveryDate = LocalDate.parse(request.getParameter("deliveryDate"), DATE_FORMATTER);
-		String productUrl = request.getParameter("productUrl");
-		String description = request.getParameter("description");
-		
-		Product product = new Product(null, name, value, deliveryDate, productUrl, description);
+	public String update(ProductDto obj) {
+		Product product = obj.toProduct();
 		productRepository.save(product);
-		
-		RedirectView redirectView = new RedirectView();
-		redirectView.setUrl("/");
-		return redirectView;
+		return "redirect:/";
 	}
 	
 	@GetMapping("delete/{id}")
-	public RedirectView delete(@PathVariable Long id) {
+	public String delete(@PathVariable Long id) {
 		productRepository.deleteById(id);
-		RedirectView redirectView = new RedirectView();
-		redirectView.setUrl("/");
-		return redirectView;
+		return "redirect:/";
 	}
 	
 	/*public RedirectView search() {
