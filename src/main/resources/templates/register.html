@@ -15,26 +15,41 @@
 <body>
     <div class="container">
         <h1>Register of products</h1>
-        <form class="row g-3 mt-3" method="post">
+        <form class="row g-3 mt-3" method="post" th:object="${productDto}">
             <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">Name of product</label>
-                <input type="text" class="form-control" id="inputEmail4" name="name">
+                <input type="text" class="form-control" id="inputEmail4" th:field="*{name}" th:errorClass="is-invalid">
+                <div class="invalid-feedback" th:errors="*{name}">
+                    mensagem de erro
+                </div>
             </div>
             <div class="col-md-3">
                 <label for="inputPassword4" class="form-label">Value</label>
-                <input type="number" class="form-control" id="inputPassword4" name="value">
+                <input type="number" class="form-control" id="inputPassword4" th:field="*{value}" th:errorClass="is-invalid">
+                <div class="invalid-feedback" th:errors="*{value}">
+                    mensagem de erro
+                </div>
             </div>
             <div class="col-3">
                 <label for="inputAddress" class="form-label">Dalivery date</label>
-                <input type="date" class="form-control" id="Dalivery date" name="deliveryDate">
+                <input type="date" class="form-control" id="Dalivery date" th:field="*{deliveryDate}" th:errorClass="is-invalid">
+                <div class="invalid-feedback" th:errors="*{deliveryDate}">
+                    mensagem de erro
+                </div>
             </div>
             <div class="col-12">
                 <label for="inputAddress2" class="form-label">Url of product</label>
-                <input type="url" class="form-control" id="inputAddress2" name="productUrl">
+                <input type="url" class="form-control" id="inputAddress2" th:field="*{productUrl}" th:errorClass="is-invalid">
+                <div class="invalid-feedback" th:errors="*{productUrl}">
+                    mensagem de erro
+                </div>
             </div>
             <div class="col-md-12">
                 <label for="inputCity" class="form-label">Description</label>
-                <textarea class="form-control" id="inputCity" name="description" rows="3"></textarea>
+                <textarea class="form-control" id="inputCity" name="description" rows="3" th:field="*{description}" th:errorClass="is-invalid"></textarea>
+                <div class="invalid-feedback" th:errors="*{description}">
+                    mensagem de erro
+                </div>
             </div>
             <div class="col-12">
                 <button type="submit" class="btn btn-primary">Submit</button>

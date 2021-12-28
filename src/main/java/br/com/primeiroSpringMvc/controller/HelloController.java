@@ -34,7 +34,7 @@ public class HelloController {
 	}
 	
 	@GetMapping("register")
-	public String register() {
+	public String register(ProductDto obj) {
 		return "register";
 	}
 	
@@ -42,7 +42,7 @@ public class HelloController {
 	public String register(@Valid ProductDto obj, BindingResult result) {
 
 		if (result.hasErrors()) {
-			return "redirect:register";
+			return "register";
 		}
 		
 		Product product = obj.toProduct();

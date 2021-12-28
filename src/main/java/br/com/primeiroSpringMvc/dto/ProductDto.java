@@ -3,11 +3,9 @@ package br.com.primeiroSpringMvc.dto;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
-import org.hibernate.annotations.NotFound;
-import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.NumberFormat;
 
 import br.com.primeiroSpringMvc.model.Product;
 
